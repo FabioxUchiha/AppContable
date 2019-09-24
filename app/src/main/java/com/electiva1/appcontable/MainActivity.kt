@@ -19,9 +19,12 @@ class MainActivity : AppCompatActivity() {
 
         val custom_list = CListAdapter(this, custom_list_data)
 
+        custom_list_data.add(CList(R.drawable.recordatorio,"Recordatorio","Recordatorio"))
+        custom_list_data.add(CList(R.drawable.diccionario,"Diccionario","Diccionario"))
         custom_list_data.add(CList(R.drawable.calculadora,"calculadora","Calculadora"))
-        custom_list_data.add(CList(R.drawable.nomina,"Nomina","Nomina"))
-
+        custom_list_data.add(CList(R.drawable.calculofinanciero,"Cálculos financieros","Cálculos financieros"))
+        custom_list_data.add(CList(R.drawable.cuentasreales,"Cuentas reales","Cuentas reales"))
+        custom_list_data.add(CList(R.drawable.nomina,"Cuentas nominales","Cuentas nominales"))
 
         listView.adapter = custom_list
 
