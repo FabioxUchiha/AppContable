@@ -1,11 +1,11 @@
 package com.electiva1.appcontable
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Adapter
 import android.widget.AdapterView
-import android.widget.ListView
 import android.widget.Toast
+import android.widget.ListView as ListView1
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val listView = findViewById<ListView>(R.id.list)
+        val listView = findViewById<ListView1>(R.id.list)
 
         val custom_list_data = ArrayList<CList>()
 
@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
         listView.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->
 
             Toast.makeText(this@MainActivity," elemento clikeado:- $id", Toast.LENGTH_SHORT).show()
+            if (position==2){
+                val myIntent = Intent(this, CalculatorActivity::class.java)
+                startActivity(myIntent)
+            }
 
         }
 
