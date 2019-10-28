@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         listView.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position, id ->
 
             Toast.makeText(this@MainActivity," elemento clikeado:- $id", Toast.LENGTH_SHORT).show()
+            if (position==0){
+                val myIntent = Intent(this, RecordatorioActivity::class.java)
+                startActivity(myIntent)
+            }
             if (position==2){
                 val myIntent = Intent(this, CalculatorActivity::class.java)
                 startActivity(myIntent)
