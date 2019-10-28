@@ -19,12 +19,13 @@ class MainActivity : AppCompatActivity() {
 
         val custom_list = CListAdapter(this, custom_list_data)
 
-        custom_list_data.add(CList(R.drawable.recordatorio,"Recordatorio","Recordatorio"))
-        custom_list_data.add(CList(R.drawable.diccionario,"Diccionario","Diccionario"))
-        custom_list_data.add(CList(R.drawable.calculadora,"calculadora","Calculadora"))
-        custom_list_data.add(CList(R.drawable.calculofinanciero,"Cálculos financieros","Cálculos financieros"))
-        custom_list_data.add(CList(R.drawable.cuentasreales,"Cuentas reales","Cuentas reales"))
-        custom_list_data.add(CList(R.drawable.nomina,"Cuentas nominales","Cuentas nominales"))
+        custom_list_data.add(CList(R.drawable.recordatorio,"Recordatorio","Recordatorio")) //0
+        custom_list_data.add(CList(R.drawable.diccionario,"Diccionario","Diccionario")) //1
+        custom_list_data.add(CList(R.drawable.calculadora,"calculadora","Calculadora")) //2
+        custom_list_data.add(CList(R.drawable.calculofinanciero,"Cálculos financieros","Cálculos financieros")) //3
+        custom_list_data.add(CList(R.drawable.cuentasreales,"Cuentas reales","Cuentas reales")) //4
+        custom_list_data.add(CList(R.drawable.nomina,"Cuentas nominales","Cuentas nominales")) //5
+        custom_list_data.add(CList(R.drawable.testfinanzas,"Test de finanzas","Test de finanzas")) //6
 
         listView.adapter = custom_list
 
@@ -35,8 +36,11 @@ class MainActivity : AppCompatActivity() {
                 val myIntent = Intent(this, CalculatorActivity::class.java)
                 startActivity(myIntent)
             }
-
+            if (position==5){
+                val myIntent = Intent(this, NominaActivity::class.java)
+                startActivity(myIntent)
+            }
         }
-
     }
 }
+
