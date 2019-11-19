@@ -36,6 +36,10 @@ class MainActivity : AppCompatActivity() {
                 val myIntent = Intent(this, RecordatorioActivity::class.java)
                 startActivity(myIntent)
             }
+            if (position==1){
+                val myIntent = Intent(this, DictionaryActivity::class.java)
+                startActivity(myIntent)
+            }
             if (position==2){
                 val myIntent = Intent(this, CalculatorActivity::class.java)
                 startActivity(myIntent)
